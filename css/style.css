@@ -8,7 +8,6 @@
 
   --color-primary-variant: var(--color-gray);
 
-  /* --color-accent: var(--color-blue); */
   --color-accent: pink;
 
   --color-accent-variant: pink;
@@ -120,9 +119,9 @@ button :hover {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
+/*Home*/
 #Home {
   background-color: var(--color-primary);
-  /* background-color: #fd6413; */
   color: var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
@@ -175,7 +174,6 @@ button :hover {
   position: relative;
   top: 2px;
 }
-/* Skills */
 .majors {
   display: flex;
   justify-content: space-between;
@@ -313,12 +311,8 @@ button :hover {
   border-radius: 8px;
   overflow: hidden;
 }
-/* .project__img {
-  width: 100%;
-} */
 
 .project__img {
-  transition: all 0.3s ease;
   width: 100%;
 }
 
@@ -341,62 +335,7 @@ button :hover {
 .project__metadata:hover {
   opacity: 0.8;
 }
-/* testimonials */
-#testimonials {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  align-items: center;
-}
-.testimonial--opacity {
-}
-.testimonials:nth-child(even) {
-  flex-direction: row-reverse;
-}
-.testimonials__img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 100%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-.testimonials__bubble {
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-.testimonials__bubble__name {
-  color: var(--color-accent-variant);
-  font-weight: bold;
-  filter: brightness(150%);
-}
-/* Arrow up  */
-.arrow {
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-.arrow-up {
-  background-color: var(--color-primary);
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  font-size: 3rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 100%;
-  box-shadow: 5px 5px 0px 0px var(--color-accent);
-}
-.arrow-up__logo {
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 2rem;
-  bottom: 0.5rem;
-  right: 0.5rem;
-}
+
 /*Footer */
 #contact {
   background-color: var(--color-primary);
