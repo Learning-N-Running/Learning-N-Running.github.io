@@ -7,16 +7,7 @@ document.addEventListener("scroll", () => {
     header.classList.remove("header--dark");
   }
 });
-const home = document.querySelector(".home--opacity");
-const homeHeight = home.getBoundingClientRect().height;
-const skill = document.querySelector(".skills--opacity");
-const skillHeight = skill.getBoundingClientRect().height;
-const work = document.querySelector(".work--opacity");
-const workHeight = work.getBoundingClientRect().height;
-const testimonial = document.querySelector(".testimonial--opacity");
-const testimonialHeight = testimonial.getBoundingClientRect().height;
-const contact = document.querySelector(".contact--opacity");
-const contactHeight = contact.getBoundingClientRect().height;
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > 0 && window.scrollY < homeHeight) {
     const opacity = window.scrollY / homeHeight;
@@ -44,8 +35,78 @@ document.addEventListener("scroll", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".header__menu__item");
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      // 모든 메뉴 아이템에서 'active' 클래스 제거
+      menuItems.forEach((innerItem) => {
+        innerItem.classList.remove("active");
+      });
+
+      // 클릭한 메뉴 아이템에 'active' 클래스 추가
+      item.classList.add("active");
+    });
+  });
+});
+
+const home = document.querySelector(".home--opacity");
+const homeHeight = home.getBoundingClientRect().height;
+const about = document.querySelector(".about--opacity");
+const aboutHeight = work.getBoundingClientRect().height;
+const skills = document.querySelector(".skills--opacity");
+const skillsHeight = skills.getBoundingClientRect().height;
+const history = document.querySelector(".history--opacity");
+const historyHeight = contact.getBoundingClientRect().height;
+
 const arrow = document.querySelector(".arrow");
 document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrow.style.opacity = 1;
+  } else {
+    arrow.style.opacity = 0;
+  }
+});
+
+document.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  const homeSection = document.querySelector("#HOME");
+  const aboutSection = document.querySelector("#About");
+  const skillsSection = document.querySelector("#Skills");
+  const historySection = document.querySelector("#History");
+
+  const homePosition = homeSection.offsetTop;
+  const aboutPosition = aboutSection.offsetTop;
+  const skillsPosition = skillsSection.offsetTop;
+  const historyPosition = historySection.offsetTop;
+
+  if (scrollPosition >= homePosition && scrollPosition < aboutPosition) {
+    window.location.hash = "Home";
+  } else if (
+    scrollPosition >= aboutPosition &&
+    scrollPosition < skillsPosition
+  ) {
+    window.location.hash = "About";
+  } else if (
+    scrollPosition >= skillsPosition &&
+    scrollPosition < historyPosition
+  ) {
+    window.location.hash = "Skills";
+  } else if (scrollPosition >= historyPosition) {
+    window.location.hash = "History";
+  }
+});
+
+// JavaScript
+document.addEventListener("scroll", () => {
+  if (window.scrollY > headerHeight) {
+    header.classList.add("header--dark");
+  } else {
+    header.classList.remove("header--dark");
+  }
+
   if (window.scrollY > homeHeight / 2) {
     arrow.style.opacity = 1;
   } else {

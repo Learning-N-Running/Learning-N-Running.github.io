@@ -11,7 +11,7 @@
   /* --color-accent: var(--color-blue); */
   --color-accent: pink;
 
-  --color-accent-variant: var(--color-orange);
+  --color-accent-variant: pink;
 
   --color-text: var(--color-white);
 
@@ -56,7 +56,7 @@ button :hover {
   outline: 1px solid var(--color-accent);
 }
 /*Common*/
-.max-contanior {
+.max-container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1rem;
@@ -120,7 +120,7 @@ button :hover {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
-#HOME {
+#Home {
   background-color: var(--color-primary);
   /* background-color: #fd6413; */
   color: var(--color-text);
@@ -258,12 +258,12 @@ button :hover {
   background-color: var(--color-accent);
   height: 3px;
 }
-/* Work */
-#Work {
+/* History */
+#History {
   background-color: var(--color-primary);
   color: var(--color-text);
 }
-.work--opacity {
+.history--opacity {
 }
 .catagories {
   display: flex;
@@ -304,7 +304,7 @@ button :hover {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 }
